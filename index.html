@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-5">
+        <a class="navbar-brand" href="#"><img src="images/logo/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop
+              </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Shop Category</a>
+                        <a class="dropdown-item" href="#">Product Details</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <div class="" id="cartBtn" onclick="showSelectedProduct()">
+                        <i class="fa" style="font-size:30px">&#xf07a;</i>
+                        <span class='badge badge-warning' id='cartCount'>0</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Making Carousel -->
+    <div class="container-fluid banner-top">
+        <div id="carouselExampleSlidesOnly" class="carousel slide gray-bg" data-ride="carousel">
+            <div class="carousel-inner px-5">
+                <div class="carousel-item active">
+                    <div class="row align-items-center carousel-first py-5">
+                        <div class="col-md-5">
+                            <h1 class="font-weight-bold">Wood & Cloth Sofa</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nam pariatur, cupiditate ab molestiae voluptatibus harum soluta nulla odit rem.</p>
+                            <button type="button" class="text-white btn rounded-pill buy-now-button">Buy Now</button>
+                        </div>
+                        <div class="col-md-7">
+                            <img class="img-fluid" src="images/banner/banner_img.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row align-items-center carousel-first">
+                        <div class="col-md-5">
+                            <h1 class="font-weight-bold">Wood & Cloth Sofa</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nam pariatur, cupiditate ab molestiae voluptatibus harum soluta nulla odit rem.</p>
+                            <button type="button" class="text-white btn rounded-pill buy-now-button">Buy Now</button>
+                        </div>
+                        <div class="col-md-7">
+                            <img class="img-fluid" src="images/banner/banner_img.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Making featured product -->
+    <div class="container-fluid">
+        <h2 class="font-weight-bold mt-4 pl-3 text-center">Featured Category</h2>
+        <div class="row m-3">
+            <div class="col-md-6 mx-4 p-4 feature1 d-flex">
+                <div>
+                    <p>Premium Quality</p>
+                    <h3>Latest foam Sofa</h3>
+                </div>
+                <img class="img-fluid" src="images/featureproduct/feature_1.png" alt="">
+            </div>
+            <div class="col-md-5 mx-4 p-4 feature2 d-flex">
+                <div>
+                    <p>Premium Quality</p>
+                    <h3>Latest from Sofa</h3>
+                </div>
+                <img class="img-fluid" src="images/featureproduct/feature_2.png" alt="">
+            </div>
+        </div>
+        <div class="row m-3">
+            <div class="col-md-4 mx-4 p-4 feature3 d-flex">
+                <div>
+                    <p>Premium Quality</p>
+                    <h3>Latest foam Sofa</h3>
+                </div>
+                <img class="img-fluid" src="images/featureproduct/feature_3.png" alt="">
+            </div>
+            <div class="col-md-7 mx-4 p-4 feature4 d-flex">
+                <div>
+                    <p>Premium Quality</p>
+                    <h3>Latest from Sofa</h3>
+                </div>
+                <img class="img-fluid" src="images/featureproduct/feature_4.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Seller Product -->
+    <div class="container-fluid banner-top">
+        <div id="carouselExampleInterval" class="carousel slide gray-bg" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active p-5" data-interval="10000">
+                    <div class="row align-items-center carousel-first py-5">
+                        <div class="col-md-4 spec" id="item">
+                            <img class="img-fluid" src="images/new-arrival/product_1.png" class="d-block w-100" alt="...">
+                            <h4>Latest Chair</h4>
+                            <h5>$ <span id="itemPrice">150</span></h5>
+
+                            <input type="button" id="plusBtn" class="btn btn-danger" value="+ Add to cart" onclick="updateCartQuant(true)"><br>
+                            <input type="button" id="minusBtn" class="btn btn-danger" value="- Remove from cart" onclick="updateCartQuant(false)">
+
+
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_4.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <div class="row align-items-center carousel-first">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_5.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_7.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_8.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <div class="row align-items-center carousel-first py-5">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <div class="row align-items-center carousel-first py-5">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const priceNumber = document.getElementById("itemPrice");
+        let priceCount = parseFloat(priceNumber.innerText);
+
+
+        function updateCartQuant(isIncrease) {
+            let cartQuant = document.getElementById("cartCount").innerText;
+            cartQuant = parseFloat(cartQuant);
+            if (isIncrease == true) {
+                cartCount.innerText = cartQuant + 1;
+                itemPrice.innerText = cartCount.innerText * 150;
+            }
+            if (isIncrease == false && cartQuant > 0) {
+                cartCount.innerText = cartQuant - 1;
+                itemPrice.innerText = cartCount.innerText * 150;
+            }
+        }
+    </script>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
