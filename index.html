@@ -37,12 +37,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                    <div class="" id="cartBtn" onclick="showSelectedProduct()">
-                        <i class="fa" style="font-size:30px">&#xf07a;</i>
-                        <span class='badge badge-warning' id='cartCount'>0</span>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </nav>
@@ -115,68 +110,202 @@
                     <p>Premium Quality</p>
                     <h3>Latest from Sofa</h3>
                 </div>
-                <img class="img-fluid" src="images/featureproduct/feature_4.png" alt="">
+                <img class="img-fluid w-100" src="images/featureproduct/feature_4.png" alt="">
             </div>
         </div>
     </div>
 
     <!-- Best Seller Product -->
-    <div class="container-fluid banner-top">
-        <div id="carouselExampleInterval" class="carousel slide gray-bg" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active p-5" data-interval="10000">
-                    <div class="row align-items-center carousel-first py-5">
-                        <div class="col-md-4 spec" id="item">
-                            <img class="img-fluid" src="images/new-arrival/product_1.png" class="d-block w-100" alt="...">
-                            <h4>Latest Chair</h4>
-                            <h5>$ <span id="itemPrice">150</span></h5>
-
-                            <input type="button" id="plusBtn" class="btn btn-danger" value="+ Add to cart" onclick="updateCartQuant(true)"><br>
-                            <input type="button" id="minusBtn" class="btn btn-danger" value="- Remove from cart" onclick="updateCartQuant(false)">
-
-
-                        </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_4.png" class="d-block w-100" alt="...">
-                        </div>
+    <h2 class="font-weight-bold mt-4 pl-3 text-center">Best Seller</h2>
+    <div class="container-fluid">
+        <div class="card-deck p-5">
+            <div class="card">
+                <img class="img-fluid best-seller-img" src="images/best-seller/product_1 (1).png " class="d-block w-100 " alt="... ">
+                <h4 class="text-center">Latest Chair</h4>
+                <div class="d-flex p-3">
+                    <h3 class="mr-auto">$ <span id="item9Price">150</span></h3>
+                    <div>
+                        <i class="fa" style="font-size:40px ">&#xf07a;</i>
+                        <span class='badge badge-warning' id='item9Quant'>0</span>
                     </div>
-                    <div class="row align-items-center carousel-first">
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_5.png" class="d-block w-100" alt="...">
+                </div><br>
+                <div class="d-flex justify-content-between p-3">
+                    <button class="btn btn-default best-seller-button" onclick="updateItem(true,'item9')">+ Add to cart</button><br>
+                    <button class="btn btn-default best-seller-button" onclick="updateItem(false, 'item9')">- Remove from cart</button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img class="img-fluid best-seller-img" src="images/best-seller/product_2 (1).png " class="d-block w-100 " alt="... ">
+                <h4 class="text-center">Latest Chair</h4>
+                <div class="d-flex p-3">
+                    <h3 class="mr-auto ">$ <span id="item10Price">150</span></h3>
+                    <div>
+                        <i class="fa" style="font-size:40px ">&#xf07a;</i>
+                        <span class='badge badge-warning' id='item10Quant'>0</span>
+                    </div>
+                </div><br>
+                <div class="d-flex justify-content-between p-3">
+                    <button class="btn btn-default best-seller-button" onclick="updateItem(true,'item10')">+ Add to cart</button><br>
+                    <button class="btn btn-default best-seller-button" onclick="updateItem(false, 'item10')">- Remove from cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="img-fluid best-seller-img" src="images/best-seller/product_3 (1).png " class="d-block w-100 " alt="... ">
+                <h4 class="text-center ">Latest Chair</h4>
+                <div class="d-flex p-3">
+                    <h3 class="mr-auto ">$ <span id="item11Price">150</span></h3>
+                    <div>
+                        <i class="fa" style="font-size:40px ">&#xf07a;</i>
+                        <span class='badge badge-warning' id='item11Quant'>0</span>
+                    </div>
+                </div><br>
+                <div class="d-flex justify-content-between p-3">
+                    <button class="btn btn-default best-seller-button" onclick="updateItem(true,'item11')">+ Add to cart</button><br>
+                    <button class="btn btn-default best-seller-button" onclick="updateItem(false, 'item11')">- Remove from cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Arrival -->
+        <h2 class="font-weight-bold mt-4 pl-3 text-center">New Arrival</h2>
+        <div class="row  py-5 d-flex justify-content-center">
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item1Show" onmousemove="hiddenShow(true, 'item1Show') " onmouseout="hiddenShow(false, 'item1Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_1.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item1Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item1Quant'>0</span>
                         </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_7.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_8.png" class="d-block w-100" alt="...">
-                        </div>
+                    </div><br>
+                    <div id="item1ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item1')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item1')">- Remove from cart</button>
                     </div>
                 </div>
-                <div class="carousel-item" data-interval="2000">
-                    <div class="row align-items-center carousel-first py-5">
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item2Show" onmousemove="hiddenShow(true, 'item2Show') " onmouseout="hiddenShow(false, 'item2Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_3.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item2Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item2Quant'>0</span>
                         </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
-                        </div>
+                    </div><br>
+                    <div id="item2ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item2')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item2')">- Remove from cart</button>
                     </div>
-                    <div class="row align-items-center carousel-first py-5">
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_1.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item3Show" onmousemove="hiddenShow(true, 'item3Show') " onmouseout="hiddenShow(false, 'item3Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_4.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item3Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item3Quant'>0</span>
                         </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
+                    </div><br>
+                    <div id="item3ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item3')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item3')">- Remove from cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item4Show" onmousemove="hiddenShow(true, 'item4Show') " onmouseout="hiddenShow(false, 'item4Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_5.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item4Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item4Quant'>0</span>
                         </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="images/new-arrival/product_3.png" class="d-block w-100" alt="...">
+                    </div><br>
+                    <div id="item4ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item4')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item4')">- Remove from cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  py-5 d-flex justify-content-center">
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item5Show" onmousemove="hiddenShow(true, 'item5Show') " onmouseout="hiddenShow(false, 'item5Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_7.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item5Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item5Quant'>0</span>
                         </div>
+                    </div><br>
+                    <div id="item5ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item5')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item5')">- Remove from cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item6Show" onmousemove="hiddenShow(true, 'item6Show') " onmouseout="hiddenShow(false, 'item6Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_8.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item6Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item6Quant'>0</span>
+                        </div>
+                    </div><br>
+                    <div id="item6ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item6')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item6')">- Remove from cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item7Show" onmousemove="hiddenShow(true, 'item7Show') " onmouseout="hiddenShow(false, 'item7Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_1.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item7Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item7Quant'>0</span>
+                        </div>
+                    </div><br>
+                    <div id="item7ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item7')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item7')">- Remove from cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center m-5 " id="item8Show" onmousemove="hiddenShow(true, 'item8Show') " onmouseout="hiddenShow(false, 'item8Show') ">
+                <div>
+                    <img class="img-fluid " src="images/new-arrival/product_3.png " class="d-block w-100 " alt="... ">
+                    <h4 class="text-center ">Latest Chair</h4>
+                    <div class="d-flex ">
+                        <h5 class="mr-auto ">$ <span id="item8Price">150</span></h5>
+                        <div>
+                            <i class="fa" style="font-size:30px ">&#xf07a;</i>
+                            <span class='badge badge-warning' id='item8Quant'>0</span>
+                        </div>
+                    </div><br>
+                    <div id="item8ShowButton" class="d-flex flex-column">
+                        <button class="btn btn-success" onclick="updateItem(true,'item8')">+ Add to cart</button><br>
+                        <button class="btn btn-danger" onclick="updateItem(false, 'item8')">- Remove from cart</button>
                     </div>
                 </div>
             </div>
@@ -184,30 +313,100 @@
     </div>
 
 
+    <!-- Making Flash Sale -->
+    <section>
+        <div class="container-fluid m-5">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="img-fluid" src="images/banner/offer_img.png" alt="">
+                </div>
+                <div class="col-md-7 d-flex align-items-center">
+                    <div>
+                        <h1>Weekly sale on 60% of all products</h1>
+                        <p id="demo"></p>
+                        <input type="email" name="" class="booking" placeholder="Enter your email address">
+                        <button type="submit" class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid p-5 subscribe-area d-flex align-items-center justify-content-center">
+            <div>
+                <img class="img-fluid" id="last-img" src="images/get-in-touch.png" alt="">
+            </div>
+            <div id="input-area" class="text-center">
+                <h6>Join our newsletter</h6>
+                <h3>Subscribe to get updated with new offers</h3>
+                <input type="email" name="" class="booking" placeholder="Enter your email address">
+                <button type="submit" class="booking-btn">Subscribe Now</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script>
-        const priceNumber = document.getElementById("itemPrice");
-        let priceCount = parseFloat(priceNumber.innerText);
-
-
-        function updateCartQuant(isIncrease) {
-            let cartQuant = document.getElementById("cartCount").innerText;
-            cartQuant = parseFloat(cartQuant);
+        function updateItem(isIncrease, item) {
+            let cartInput = document.getElementById(item + "Quant");
+            cartQuant = parseInt(cartInput.innerText);
+            let priceInput = document.getElementById(item + "Price");
+            priceCount = parseFloat(priceInput.innerText);
             if (isIncrease == true) {
-                cartCount.innerText = cartQuant + 1;
-                itemPrice.innerText = cartCount.innerText * 150;
+                cartInput.innerText = cartQuant + 1;
+                priceInput.innerText = cartInput.innerText * 150;
             }
             if (isIncrease == false && cartQuant > 0) {
-                cartCount.innerText = cartQuant - 1;
-                itemPrice.innerText = cartCount.innerText * 150;
+                cartInput.innerText = cartQuant - 1;
+                priceInput.innerText = cartInput.innerText * 150;
             }
         }
+
+        function hiddenShow(isShow, id) {
+            if (isShow == true) {
+                document.getElementById(id + "Button").style.display = "block";
+            }
+            if (isShow == false) {
+                document.getElementById(id + "Button").style.display = "none";
+            }
+        }
+
+
+        var deadline = new Date("Jan 5, 2021 15:37:25").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("demo").innerHTML = days + "d " +
+                hours + "h" + minutes + "m" + seconds + "s";
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
     </script>
 
 
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script> -->
 </body>
 
 </html>

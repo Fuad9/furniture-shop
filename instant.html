@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="test()">Select-1</button>
+    <button onclick="test()">Select-2</button>
+    <button onclick="test()">Select-3</button>
+    <button onclick="test()">Select-4</button>
+
+    <p class="col">Lorem, ipsum dolor.</p>
+    <p class="col">Optio, odit quaerat?</p>
+    <p class="col">Nihil, eaque velit.</p>
+    <p class="col">Modi, necessitatibus sint!</p>
+
+    <script>
+        function test() {
+            // document.getElementsByClassName("col").style.color = "red";
+            console.log('clicked');
+            var elems = document.getElementsByClassName('col');
+            for (var i = 0; i < elems.length; i += 1) {
+                elems[i].style.color = 'red';
+            }
+        }
+    </script>
+</body>
+
+</html>
